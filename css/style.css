@@ -1,0 +1,94 @@
+/* Ini CSS */
+
+.main-judul {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  font-family: monospace;
+  margin-bottom: 20px;
+}
+
+main {
+  max-width: 750px;
+  justify-self: center;
+  background-color: #e2f7c4;
+  border-radius: 8px;
+  padding: 5px 18px
+}
+
+section {
+  padding: 5px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-group {
+  margin-bottom: 16px;
+}
+
+button {
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.bg-konversi {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+}
+
+.bg-konversi:hover {
+  opacity: 0.8;
+}
+
+.bg-konversi:active {
+  opacity: 0.6;
+}
+
+.bg-reset {
+  background-color: #f44336;
+  color: white;
+  font-weight: bold;
+}
+
+.bg-reset:hover {
+  opacity: 0.8;
+}
+
+.bg-reset:active {
+  opacity: 0.6;
+} 
+
+.bg-reverse {
+  background-color: #008CBA;
+  color: white;
+  font-weight: bold;
+}
+
+.bg-reverse:hover {
+  opacity: 0.8;
+}
+
+.bg-reverse:active {
+  opacity: 0.6;
+}
