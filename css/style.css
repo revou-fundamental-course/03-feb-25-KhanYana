@@ -1,19 +1,24 @@
 /* Ini CSS */
 
+main {
+  max-width: 475px;
+  justify-self: center;
+  background-color: #e2f7c4;
+  border-radius: 50px 0;
+  padding: 5px 18px;
+  margin-top: 20px;
+}
+
 .main-judul {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   text-align: center;
   font-family: monospace;
-  margin-bottom: 20px;
 }
 
-main {
-  max-width: 750px;
-  justify-self: center;
-  background-color: #e2f7c4;
-  border-radius: 8px;
-  padding: 5px 18px
+h1 {
+  margin-bottom: 20px;
+  margin-top: 30px;
 }
 
 section {
@@ -42,6 +47,8 @@ input {
 
 .button-group {
   margin-bottom: 16px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 button {

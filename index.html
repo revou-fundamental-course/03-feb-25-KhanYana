@@ -12,23 +12,18 @@
 </head>
 
 <body>
-  <!-- Judul -->
+  <main>
+    <!-- Judul -->
   <header class="main-judul">
     <h1>Konversi Suhu</h1>
   </header>
-  
-  <main> 
-    <!-- Introduction -->
-  <section>
-    <p>Masukkan suhu derajat Celcius (&deg;C) ke kotak dibawah, lalu klik tombol Konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (&deg;F).</p>
-  </section>
 
-  <!-- Masukkan suhu Celcius -->
+  <!-- (MAIN-INPUT) Masukkan suhu Celcius -->
    <section>
     <form>
       <div class="input-group">
         <label for="main-input">Celcius (&deg;C):</label>
-        <input type="number" id="main-input">
+        <input type="number" id="main-input" placeholder="Masukkan suhu dalam °C">
       </div>
       
       <div class="button-group">
@@ -39,15 +34,15 @@
     </form>  
    </section>
 
-  <!-- Hasil konversi -->
+  <!-- (MAIN-OUTPUT) Hasil konversi -->
     <section>
       <div class="input-group">
-        <label for="main-result">Fahrenheit (&deg;F):</label>
-        <input type="number" id="main-result" readonly>
+        <label for="main-output">Fahrenheit (&deg;F):</label>
+        <input type="number" id="main-output" placeholder="Hasil konversi dalam °F" readonly>
       </div>
     </section>
 
-  <!-- Cara Kalkulasi: -->
+  <!-- (HOW TO CONVERT) Cara Kalkulasi: -->
   <section>
     <div class="input-group">
       <label for="cara-kalkulasi">Cara Kalkulasi:</label>
@@ -55,23 +50,21 @@
     </div>
   </section>
   
-  <!-- Penjelasan Rumus -->
+  <!-- (EXPLANATION) Penjelasan Konversi Suhu -->
   <section>
     <header>
       <h3>Cara Konversi Dari Celcius (&deg;C) ke Fahrenheit (&deg;F)</h3>
     </header>
-
     <hr>
-
     <article>
-      <p>Suhu <span class="remark">S</span></p>
-      <p>S<sub>(&deg;F)</sub>=</p>
+      <p>Suhu <i><span class="remark">S</span></i> dalam derajat Fahrenheit (&deg;F) sama dengan Suhu <i><span class="remark">S</span></i> dalam derajat Celcius (&deg;C) kali
+      9/5 tambah 32.</p>
+      <p>S<sub>(&deg;F)</sub>= (S<sub>(&deg;C)</sub> x 9/5) + 32</p>
+      <p>atau</p>
+      <p>S<sub>(&deg;F)</sub>= (S<sub>(&deg;C)</sub> x 1.8) + 32</p>
     </article>
   </section> 
-
 </main>
-  
-  
 </body>
 
 <footer>
