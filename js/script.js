@@ -1,7 +1,6 @@
 // Ini File JavaScript
-console.log('Javascript is working!');
 
-// Pengambilan tag elemen
+// Pengambilan tag elemen berdasarkan ID
 const mainInput = document.getElementById("insert");
 const mainResult = document.getElementById("result");
 const calculation = document.getElementById("calculation");
@@ -13,7 +12,6 @@ let celciusToFahrenheit = true; // Mengubah kondisi awal
 // Fungsi Konversi
 function konversi() {
     const inputValue = parseFloat(mainInput.value);
-    let hasil, cara; // Deklarasi variabel untuk menghindari ReferenceError
 
     if (isNaN(inputValue)) {
         // Tampilkan pesan error di dalam input box
@@ -31,8 +29,9 @@ function konversi() {
     mainInput.style.color = "black";
     mainInput.placeholder = "Masukkan suhu";
 
-    // Kondisi untuk Reverse
-    if (celciusToFahrenheit) {
+    // RUMUS KONVERSI SUHU
+    let hasil, cara;
+		if (celciusToFahrenheit) {
         // Konversi dari Celcius ke Fahrenheit
         let fahrenheit = (inputValue * 9 / 5) + 32;
         fahrenheit = Math.round(fahrenheit * 100) / 100;
@@ -88,12 +87,11 @@ function reverse() {
     labelOutput.innerHTML = celciusToFahrenheit
         ? "Fahrenheit (&deg;F):"
         : "Celcius (&deg;C):";
-
-    // Panggil fungsi konversi agar hasil ikut berubah
-    konversi();
+    
+				konversi();
 }
 
-// Event listener agar saat user mulai mengetik, placeholder & warna kembali normal
+// Warna box kembali normal saat mengetik
 mainInput.addEventListener("input", function () {
     mainInput.style.border = "3px solid #ccc";
     mainInput.style.color = "black";
