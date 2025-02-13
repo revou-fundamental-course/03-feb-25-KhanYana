@@ -11,6 +11,7 @@ const labelOutput = document.getElementById("output");
 
 let celciusToFahrenheit = true; //Mengubah kondisi awal
 
+// Fungsi Konversi
 function konversi() {
 	const inputValue = parseFloat(mainInput.value);
 	if (isNaN(inputValue)) {
