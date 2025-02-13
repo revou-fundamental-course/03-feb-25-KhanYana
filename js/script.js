@@ -87,11 +87,10 @@ function reverse() {
     labelOutput.innerHTML = celciusToFahrenheit
         ? "Fahrenheit (&deg;F):"
         : "Celcius (&deg;C):";
-    
-				konversi();
+	konversi();
 }
 
-// Warna box kembali normal saat mengetik
+// Warna box kembali normal saat diketik
 mainInput.addEventListener("input", function () {
     mainInput.style.border = "3px solid #ccc";
     mainInput.style.color = "black";

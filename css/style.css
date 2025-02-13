@@ -11,7 +11,6 @@ body {
   border-radius: 50px 0;
   padding: 5px 18px;
   margin-top: 30px;
-  margin-bottom: 30px;
   border: 3px solid cyan;
   box-shadow: 0px 0px 15px cyan, 
     0px 0px 15px cyan inset;
@@ -27,6 +26,7 @@ body {
 h1 {
   margin-bottom: 20px;
   margin-top: 30px;
+  color: #205e7c;;
 }
 
 section {
@@ -106,4 +106,75 @@ button {
 
 .bg-reverse:active {
   opacity: 0.6;
+}
+
+.khan {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  color: greenyellow;
+  font-family: monospace;
+  margin: 0px;
+}
+
+/* RESPONSIVE */
+/* Media Query untuk Mobile */
+@media (max-width: 768px) {
+  .main-box {
+      max-width: 90%;
+      padding: 10px;
+      border-radius: 50px 0;
+      box-shadow: 0px 0px 10px cyan, 0px 0px 10px cyan inset;
+  }
+
+  .main-judul {
+      font-size: 14px;
+  }
+
+  input {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+  }
+
+  button {
+      font-size: 14px;
+      padding: 8px 16px;
+  }
+}
+
+/* Media Query untuk layar sangat kecil (misalnya smartphone kecil) */
+@media (max-width: 480px) {
+  .main-box {
+      padding: 8px;
+      border-radius: 50px 0;
+  }
+
+  .main-judul {
+      font-size: 12px;
+  }
+
+  input {
+      font-size: 12px;
+      padding: 8px;
+  }
+
+  .button-group {
+      gap: 5px;
+  }
+
+  button {
+      font-size: 12px;
+      padding: 6px 12px;
+  }
+
+  .khan {
+      font-size: 12px;
+  }
 }
