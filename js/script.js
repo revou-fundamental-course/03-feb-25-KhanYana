@@ -11,8 +11,6 @@ const labelOutput = document.getElementById("output");
 
 let celciusToFahrenheit = true; //Mengubah kondisi awal
 
-
-
 function konversi() {
 	const inputValue = parseFloat(mainInput.value);
 	if (isNaN(inputValue)) {
@@ -45,14 +43,28 @@ function reset() {
 
 // Fungsi Reverse
 function reverse() {
-	celciusToFahrenheit = !celciusToFahrenheit;
+	celciusToFahrenheit = !celciusToFahrenheit; // Balik status konversi
+	let inputValue = parseFloat(mainInput.value);
 
-	if (celciusToFahrenheit) {
-		labelInput.innerHTML = "Celcius (&deg;C)";
-		labelOutput.innerHTML = "Fahrenheit (&deg;F)";
-	} else {
-		labelInput.innerHTML = "Fahrenheit (&deg;F)";
-		labelOutput.innerHTML = "Celcius (&deg;C)";
+	if (!isNaN(inputValue)) {
+			// Jika ada angka di input, langsung konversi saat tombol reverse ditekan
+			if (celciusToFahrenheit) {
+					inputValue = ((inputValue - 32) * 5) / 9; // Fahrenheit ke Celcius
+			} else {
+					inputValue = (inputValue * 9) / 5 + 32; // Celcius ke Fahrenheit
+			}
+			mainInput.value = inputValue.toFixed(2); // Simpan hasil konversi di input
 	}
-	reset();
+
+	// Tukar label input dan output
+	if (celciusToFahrenheit) {
+			labelInput.innerHTML = "Celcius (&deg;C):";
+			labelOutput.innerHTML = "Fahrenheit (&deg;F):";
+	} else {
+			labelInput.innerHTML = "Fahrenheit (&deg;F):";
+			labelOutput.innerHTML = "Celcius (&deg;C):";
+	}
+
+	// Panggil fungsi konversi lagi agar result dan calculation ikut berubah
+	konversi();
 }
